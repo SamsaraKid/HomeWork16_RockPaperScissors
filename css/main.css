@@ -1,0 +1,100 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color: #ec0202;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+#wrap{
+    position: relative;
+}
+
+#chooseHeroes, #chooseVillains{
+    width: 30%;
+    aspect-ratio: 2 / 1;
+    font-size: 4em;
+}
+
+.cardSet{
+    width: 100%;
+    position: absolute;
+}
+
+.card:first-child{
+    left: 25%;
+}
+.card:nth-child(2){
+    left: 45%;
+}
+.card:last-child{
+    left: 65%;
+}
+
+.gamerSet{
+    top: 0;
+}
+
+.compSet{
+    top: 500px;
+}
+
+                        /*#villainsSet .card{*/
+                        /*    top: 300px*/
+                        /*}*/
+
+
+#gameField{
+    height: 260px;
+}
+
+.card{
+    display: inline-block;
+    width: 10%;
+    text-align: left;
+    font-size: x-small;
+    border: #ec0202 double 5px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.25s;
+    background-color: black;
+    position: absolute;
+}
+
+.hiddenDesc{
+    display: none;
+}
+
+.card:hover{
+    z-index: 100;
+    transform: scale(1.5) translateY(16%);
+}
+
+.compSet .card:hover{
+    z-index: 100;
+    transform: scale(1.5) translateY(-16%);
+}
+
+.card:hover .hiddenDesc{
+    display: block;
+}
+
+.card img{
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.hiddenDesc{
+    padding: 0 4%;
+}
+
+.card ul{
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0;
+}
+
