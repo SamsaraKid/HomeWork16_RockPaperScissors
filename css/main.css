@@ -11,37 +11,33 @@ body{
 
 #wrap{
     position: relative;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 #chooseHeroes, #chooseVillains{
     width: 30%;
     aspect-ratio: 2 / 1;
-    font-size: 4em;
+    font-size: xxx-large;
 }
 
 /*оформление каточек*/
 .cardSet{
     width: 100%;
-    position: absolute;
+    height: 270px;
+    /*position: absolute;*/
+    /*align-items: flex-end;*/
+    /*flex: 1 0 auto;*/
 }
 
-.card:first-child{
+.card1{
     left: 25%;
 }
-.card:nth-child(2){
+.card2{
     left: 45%;
 }
-.card:last-child{
+.card3{
     left: 65%;
-}
-
-.gamerSet{
-    bottom: 10px;
-    alignment: bottom;
-}
-
-.compSet{
-    top: 0;
 }
 
                         /*#villainsSet .card{*/
@@ -54,8 +50,6 @@ body{
 .card{
     display: inline-block;
     width: 10%;
-    text-align: left;
-    font-size: x-small;
     border: #fff4ac solid 1px;
     border-radius: 5px;
     overflow: hidden;
@@ -66,6 +60,7 @@ body{
 
 .hiddenDesc{
     display: none;
+    padding: 0 5%;
 }
 
 .card:hover{
@@ -84,6 +79,7 @@ body{
 
 .card img{
     width: 100%;
+    aspect-ratio: 4 / 5;
     object-fit: cover;
     object-position: top;
 }
@@ -91,16 +87,16 @@ body{
 .cardButton{
     padding: 0;
     border: 0;
-    height: 0;
+    height: min-content;
     cursor: pointer;
+    background-color: black;
+    color: #ec0202;
+    text-align: left;
+    font-size: x-small;
 }
 
 .cardButton:disabled{
     cursor: auto;
-}
-
-.hiddenDesc{
-    padding: 0 4%;
 }
 
 .card ul{
@@ -109,10 +105,56 @@ body{
     padding: 0;
 }
 
+/*.gamerCardMoved, .compCardMoved{*/
+/*    top: 35%;*/
+/*}*/
 
+/*.gamerCardMoved{*/
+/*    left: 35% !important;*/
+/*}*/
+
+/*.compCardMoved{*/
+/*    left: 55% !important;*/
+/*}*/
+
+.gamerCardMoved{
+    animation: gamerCardMovement 1s ease;
+    top: 33%;
+    left: 30%;
+}
+.compCardMoved{
+    animation: compCardMovement 1s ease;
+    top: 33%;
+    left: 60%;
+}
+
+@keyframes gamerCardMovement {
+    from{
+        top: 40%;
+        left: 25%;
+    }
+    to{
+        top: 33%;
+        left: 30% !important;
+    }
+}
+
+@keyframes compCardMovement {
+    from{
+        /*top: 0;*/
+        /*left: 25%;*/
+        top: 0;
+        left: 25%
+    }
+    to{
+        top: 33%;
+        left: 60%;
+    }
+}
 
 
 #gameField{
+    /*position: absolute;*/
     height: 260px;
 }
 
