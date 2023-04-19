@@ -19,6 +19,7 @@ body{
     font-size: 4em;
 }
 
+/*оформление каточек*/
 .cardSet{
     width: 100%;
     position: absolute;
@@ -35,11 +36,12 @@ body{
 }
 
 .gamerSet{
-    top: 0;
+    bottom: 10px;
+    alignment: bottom;
 }
 
 .compSet{
-    top: 500px;
+    top: 0;
 }
 
                         /*#villainsSet .card{*/
@@ -47,17 +49,15 @@ body{
                         /*}*/
 
 
-#gameField{
-    height: 260px;
-}
+
 
 .card{
     display: inline-block;
     width: 10%;
     text-align: left;
     font-size: x-small;
-    border: #ec0202 double 5px;
-    border-radius: 10px;
+    border: #fff4ac solid 1px;
+    border-radius: 5px;
     overflow: hidden;
     transition: transform 0.25s;
     background-color: black;
@@ -70,12 +70,12 @@ body{
 
 .card:hover{
     z-index: 100;
-    transform: scale(1.5) translateY(16%);
+    transform: scale(1.5) translateY(-40%);
 }
 
 .compSet .card:hover{
     z-index: 100;
-    transform: scale(1.5) translateY(-16%);
+    transform: scale(1.5) translateY(16%);
 }
 
 .card:hover .hiddenDesc{
@@ -88,6 +88,17 @@ body{
     object-position: top;
 }
 
+.cardButton{
+    padding: 0;
+    border: 0;
+    height: 0;
+    cursor: pointer;
+}
+
+.cardButton:disabled{
+    cursor: auto;
+}
+
 .hiddenDesc{
     padding: 0 4%;
 }
@@ -96,5 +107,12 @@ body{
     text-decoration: none;
     list-style-type: none;
     padding: 0;
+}
+
+
+
+
+#gameField{
+    height: 260px;
 }
 

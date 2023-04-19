@@ -9,9 +9,11 @@ function gamePrepare(command) {
     if (gamerCommand) {
         $('#heroesSet').addClass('gamerSet')
         $('#villainsSet').addClass('compSet')
+        $('#villainsSet .cardButton').prop('disabled', true)
     } else {
         $('#heroesSet').addClass('compSet')
         $('#villainsSet').addClass('gamerSet')
+        $('#heroesSet .cardButton').prop('disabled', true)
     }
 }
 
