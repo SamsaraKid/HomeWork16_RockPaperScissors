@@ -7,16 +7,16 @@
     <script src="js/main.js" defer></script>
     <link href="css/main.css" rel="stylesheet" type="text/css">
 </head>
-<body class="marvel_bebas_1">
+<body>
 
     <div id="wrap">
 
         <!--Начало и кнопки выбора стороны-->
         <div id="gameDesc">
             <h1>Битва героев и злодеев Марвел</h1>
-            <p>Сразитесь в увлекательной битве героев и злодеев Марвел. Сперва выберите свою сторону: </p>
-            <button id="chooseHeroes">Герои</button>
-            <button id="chooseVillains">Злодеи</button>
+            <h3>Сразитесь в увлекательной битве героев и злодеев Марвел. Сперва выберите свою сторону: </h3>
+            <button id="chooseHeroes"><h1>Герои</h1></button>
+            <button id="chooseVillains"><h1>Злодеи</h1></button>
         </div>
 
         <div hidden class="cardSet" id="heroesSet">
@@ -29,8 +29,7 @@
                 <button class="cardButton card1Button">
                     <img src="img/IronMan.webp" alt="Iron Man">
                     <div class="hiddenDesc">
-                        <p><strong>Железный Человек</strong> - Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Consequuntur, neque!</p>
+                        <p><strong>Железный Человек</strong> - гений, миллиардер, плейбой, филантроп</p>
                         <ul>
                             <li><b>Побеждает</b> Таноса</li>
                             <li><b>Проигрывает</b> Алой Ведьме</li>
@@ -44,14 +43,13 @@
             <!--Карточка персонажа-->
             <div class="card card2" id="heroCard2">
                 <button class="cardButton card2Button">
-                    <img src="img/IronMan.webp" alt="Iron Man">
+                    <img src="img/Strange.jpg" alt="Strange">
                     <div class="hiddenDesc">
-                        <p><strong>Железный Человек</strong> - Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Consequuntur, neque!</p>
+                        <p><strong>Доктор Стрэндж</strong> - блестящий хирург и превосходный маг</p>
                         <ul>
-                            <li><b>Побеждает</b> Таноса</li>
-                            <li><b>Проигрывает</b> Алой Ведьме</li>
-                            <li><b>Ничья с</b> Альтроном</li>
+                            <li><b>Побеждает</b> Алую Ведьму</li>
+                            <li><b>Проигрывает</b> Альтрону</li>
+                            <li><b>Ничья с</b> Таносом</li>
                         </ul>
                     </div>
                 </button>
@@ -60,14 +58,13 @@
             <!--Карточка персонажа-->
             <div class="card card3" id="heroCard3">
                 <button class="cardButton card3Button">
-                    <img src="img/IronMan.webp" alt="Iron Man">
+                    <img src="img/Vizhn.webp" alt="Vizhn">
                     <div class="hiddenDesc">
-                        <p><strong>Железный Человек</strong> - Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Consequuntur, neque!</p>
+                        <p><strong>Вижен</strong> - могущественное синтетическое существо с телом из вибраниума</p>
                         <ul>
-                            <li><b>Побеждает</b> Таноса</li>
-                            <li><b>Проигрывает</b> Алой Ведьме</li>
-                            <li><b>Ничья с</b> Альтроном</li>
+                            <li><b>Побеждает</b> Альтрона</li>
+                            <li><b>Проигрывает</b> Таносу</li>
+                            <li><b>Ничья с</b> Алой Ведьмой</li>
                         </ul>
                     </div>
                 </button>
@@ -76,7 +73,8 @@
 
         <div id="gameField" hidden>
 
-            <h1 id="score"></h1>
+            <h1 id="score">Счёт 0 : 0</h1>
+            <h1 id="moveResult"></h1>
 
         </div>
 
@@ -88,14 +86,13 @@
             <!--Карточка персонажа-->
             <div class="card card1" id="villainCard1">
                 <button class="cardButton card1Button">
-                    <img src="img/Thanos.webp" alt="Iron Man">
+                    <img src="img/Ultron.webp" alt="Ultron">
                     <div class="hiddenDesc">
-                        <p><strong>Железный Человек</strong> - Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Consequuntur, neque!</p>
+                        <p><strong>Альтрон</strong> - когда-то был ИИ-миротворческой программой</p>
                         <ul>
-                            <li><b>Побеждает</b> Таноса</li>
-                            <li><b>Проигрывает</b> Алой Ведьме</li>
-                            <li><b>Ничья с</b> Альтроном</li>
+                            <li><b>Побеждает</b> Доктора Стрэнджа</li>
+                            <li><b>Проигрывает</b> Вижену</li>
+                            <li><b>Ничья с</b> Железным Человеком</li>
                         </ul>
                     </div>
                 </button>
@@ -106,12 +103,11 @@
                 <button class="cardButton card2Button">
                     <img src="img/Thanos.webp" alt="Iron Man">
                     <div class="hiddenDesc">
-                        <p><strong>Железный Человек</strong> - Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Consequuntur, neque!</p>
+                        <p><strong>Танос</strong> - Безумный Титан и Тёмный Владыка</p>
                         <ul>
-                            <li><b>Побеждает</b> Таноса</li>
-                            <li><b>Проигрывает</b> Алой Ведьме</li>
-                            <li><b>Ничья с</b> Альтроном</li>
+                            <li><b>Побеждает</b> Вижена</li>
+                            <li><b>Проигрывает</b> Железному Человеку</li>
+                            <li><b>Ничья с</b> Доктором Стрэнджем</li>
                         </ul>
                     </div>
                 </button>
@@ -120,23 +116,18 @@
             <!--Карточка персонажа-->
             <div class="card card3" id="villainCard3">
                 <button class="cardButton card3Button">
-                    <img src="img/Thanos.webp" alt="Iron Man">
+                    <img src="img/Wanda.jpg" alt="Wanda">
                     <div class="hiddenDesc">
-                        <p><strong>Железный Человек</strong> - Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Consequuntur, neque!</p>
+                        <p><strong>Алая Ведьма</strong> - уроженка Заковии, мутант, телепат, маг Хаоса</p>
                         <ul>
-                            <li><b>Побеждает</b> Таноса</li>
-                            <li><b>Проигрывает</b> Алой Ведьме</li>
-                            <li><b>Ничья с</b> Альтроном</li>
+                            <li><b>Побеждает</b> Железного Человека</li>
+                            <li><b>Проигрывает</b> Доктору Стрэнджу</li>
+                            <li><b>Ничья с</b> Виженом</li>
                         </ul>
                     </div>
                 </button>
             </div>
         </div>
-
-
-
-
 
     </div>
 

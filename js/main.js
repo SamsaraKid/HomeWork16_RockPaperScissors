@@ -7,14 +7,8 @@ const fail = ['13','21','32']
 let scoreg = 0
 let scorec = 0
 
-let gamerCardLeft = ''
-let gamerCardTop = ''
-let compCardLeft = ''
-let compCardTop = ''
-let compCardNum = 0
-let gamerCardNum = 0
-
 const horisontalPositions = [$('.card1').css('left'), $('.card2').css('left'), $('.card3').css('left')]
+const verticalPositions = ['73%', '9%']
 
 
 function gamePrepare(command) {
@@ -35,11 +29,9 @@ function gamePrepare(command) {
     }
 }
 
-function makeMove(n) {
+function makeMove(gamerCardNum) {
 
-    //карточки, которыми походили игроки
-    gamerCardNum = n
-    compCardNum = Math.floor(Math.random() * 3 + 1)
+    let compCardNum = Math.floor(Math.random() * 3 + 1)
 
     let result = String(gamerCardNum) + String(compCardNum)
     $('.gamerSet .cardButton').prop('disabled', true)
@@ -47,39 +39,29 @@ function makeMove(n) {
     $('.cardSet .card').removeClass('gamerHover').removeClass('compHover')
     $('.hiddenDesc').css('display', 'none')
 
-    //сохраняем начальное положение карточек
-    gamerCardLeft = horisontalPositions[gamerCardNum-1]
-    gamerCardTop = $('.gamerSet .card' + gamerCardNum).css('top')
-    compCardLeft = horisontalPositions[compCardNum-1]
-    compCardTop = $('.compSet .card' + compCardNum).css('top')
-
-    console.log(gamerCardLeft, gamerCardTop, compCardLeft, compCardTop)
-
-
     //анимация
-    $('.gamerSet .card' + gamerCardNum).animate({left: "30%", top: "35%"}, 500)
-    $('.compSet .card' + compCardNum).animate({left: "60%", top: "35%"}, 500)
+    $('.gamerSet .card' + gamerCardNum).animate({left: "30%", top: "38%"}, 500)
+    $('.compSet .card' + compCardNum).animate({left: "60%", top: "38%"}, 500)
 
     //результат игры
     if (win.includes(result)) {
         scoreg++
-        $('#score').text(' Вы выиграли ' + scoreg + ':' + scorec)
+        $('#moveResult').text('Вы выиграли')
     } else if (fail.includes(result)) {
         scorec++
-        $('#score').text(' Вы проиграли ' + scoreg + ':' + scorec)
+        $('#moveResult').text('Вы проиграли')
     } else {
-        $('#score').text(' Ничья ' + scoreg + ':' + scorec)
+        $('#moveResult').text('Ничья')
     }
+    $('#score').text('Счёт ' + scoreg + ' : ' + scorec)
 
     //откат анимации
     setTimeout(function () {
-        $('.gamerSet .card'+gamerCardNum).animate({left: gamerCardLeft, top: gamerCardTop}, 500)
-        $('.compSet .card'+compCardNum).animate({left: compCardLeft, top: compCardTop}, 500)
+        $('.gamerSet .card'+gamerCardNum).animate({left: horisontalPositions[gamerCardNum-1], top: verticalPositions[0]}, 500)
+        $('.compSet .card'+compCardNum).animate({left: horisontalPositions[compCardNum-1], top: verticalPositions[1]}, 500)
         $('.gamerSet .cardButton').prop('disabled', false)
-        $('#score').text(scoreg + ':' + scorec)
+        $('#moveResult').text('')
     }, 1200)
-
-
 }
 
 
@@ -112,5 +94,4 @@ $('#villainCard1').hover(customHover, customUnhover)
 $('#villainCard2').hover(customHover, customUnhover)
 $('#villainCard3').hover(customHover, customUnhover)
 
-$('#reload').click(reload)
 
