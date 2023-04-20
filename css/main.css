@@ -2,8 +2,30 @@
   box-sizing: border-box;
 }
 
+
+
+@font-face{font-family: BebasNeue; src: url("../img/ofont.ru_Bebas Neue.ttf"); }
+.marvel_bebas_1 {
+    font-family: "BebasNeue";
+    /*width: 100%;*/
+    /*height: 186px;*/
+    /*text-align: center;*/
+    /*text-transform: uppercase;*/
+    font-size: 2rem;
+    /*color: white;*/
+    /*background: red;*/
+    line-height: 5px;
+    font-weight: 1000;
+    letter-spacing: 4px;
+}
+
+
 body{
     background-color: black;
+    background-image: url("../img/back.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: top center;
     color: #ec0202;
     font-family: sans-serif;
     text-align: center;
@@ -23,11 +45,15 @@ body{
 
 /*оформление каточек*/
 .cardSet{
-    width: 100%;
-    height: 270px;
+    width: 70%;
+    height: 340px;
+    margin: auto;
+    /*height: min-content;*/
     /*position: absolute;*/
     /*align-items: flex-end;*/
     /*flex: 1 0 auto;*/
+    /*border: white solid 1px;*/
+    /*border-radius: 10px;*/
 }
 
 .card1{
@@ -40,10 +66,6 @@ body{
     left: 65%;
 }
 
-                        /*#villainsSet .card{*/
-                        /*    top: 300px*/
-                        /*}*/
-
 
 
 
@@ -51,11 +73,13 @@ body{
     display: inline-block;
     width: 10%;
     border: #fff4ac solid 1px;
-    border-radius: 5px;
+    border-radius: 3px;
     overflow: hidden;
     transition: transform 0.25s;
     background-color: black;
     position: absolute;
+    /*position: relative;*/
+    box-shadow: 5px 5px 5px -1px rgba(0, 0, 0, 0.6);
 }
 
 .hiddenDesc{
@@ -63,19 +87,30 @@ body{
     padding: 0 5%;
 }
 
-.card:hover{
+/*.gamerSet .card:hover{*/
+/*    z-index: 100;*/
+/*    transform: scale(1.5) translateY(-35%);*/
+/*}*/
+
+/*.compSet .card:hover{*/
+/*    z-index: 100;*/
+/*    transform: scale(1.5) translateY(16%);*/
+/*}*/
+
+/*.card:hover .hiddenDesc{*/
+/*    display: block;*/
+/*}*/
+
+.gamerHover{
     z-index: 100;
-    transform: scale(1.5) translateY(-40%);
+    transform: scale(1.5) translateY(-35%);
 }
 
-.compSet .card:hover{
+.compHover{
     z-index: 100;
     transform: scale(1.5) translateY(16%);
 }
 
-.card:hover .hiddenDesc{
-    display: block;
-}
 
 .card img{
     width: 100%;
@@ -117,44 +152,47 @@ body{
 /*    left: 55% !important;*/
 /*}*/
 
-.gamerCardMoved{
-    animation: gamerCardMovement 1s ease;
-    top: 33%;
-    left: 30%;
-}
-.compCardMoved{
-    animation: compCardMovement 1s ease;
-    top: 33%;
-    left: 60%;
-}
+/*.gamerCardMoved{*/
+/*    animation: gamerCardMovement 1s ease;*/
+/*    top: 33%;*/
+/*    left: 30%;*/
+/*}*/
+/*.compCardMoved{*/
+/*    animation: compCardMovement 1s ease;*/
+/*    top: 33%;*/
+/*    left: 60%;*/
+/*}*/
 
-@keyframes gamerCardMovement {
-    from{
-        top: 40%;
-        left: 25%;
-    }
-    to{
-        top: 33%;
-        left: 30% !important;
-    }
-}
+/*@keyframes gamerCardMovement {*/
+/*    from{*/
+/*        top: 40%;*/
+/*        left: 25%;*/
+/*    }*/
+/*    to{*/
+/*        top: 33%;*/
+/*        left: 30% !important;*/
+/*    }*/
+/*}*/
 
-@keyframes compCardMovement {
-    from{
-        /*top: 0;*/
-        /*left: 25%;*/
-        top: 0;
-        left: 25%
-    }
-    to{
-        top: 33%;
-        left: 60%;
-    }
-}
+/*@keyframes compCardMovement {*/
+/*    from{*/
+/*        !*top: 0;*!*/
+/*        !*left: 25%;*!*/
+/*        top: 0;*/
+/*        left: 25%*/
+/*    }*/
+/*    to{*/
+/*        top: 33%;*/
+/*        left: 60%;*/
+/*    }*/
+/*}*/
 
 
 #gameField{
-    /*position: absolute;*/
-    height: 260px;
+    /*position: relative;*/
+    width: 100%;
+    height: 230px;
+    /*top: 33%;*/
+    /*border: white solid 1px;*/
 }
 
