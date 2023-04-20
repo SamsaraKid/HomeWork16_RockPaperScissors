@@ -63,19 +63,30 @@ body{
     padding: 0 5%;
 }
 
-.card:hover{
+/*.gamerSet .card:hover{*/
+/*    z-index: 100;*/
+/*    transform: scale(1.5) translateY(-35%);*/
+/*}*/
+
+/*.compSet .card:hover{*/
+/*    z-index: 100;*/
+/*    transform: scale(1.5) translateY(16%);*/
+/*}*/
+
+/*.card:hover .hiddenDesc{*/
+/*    display: block;*/
+/*}*/
+
+.gamerHover{
     z-index: 100;
-    transform: scale(1.5) translateY(-40%);
+    transform: scale(1.5) translateY(-35%);
 }
 
-.compSet .card:hover{
+.compHover{
     z-index: 100;
     transform: scale(1.5) translateY(16%);
 }
 
-.card:hover .hiddenDesc{
-    display: block;
-}
 
 .card img{
     width: 100%;
@@ -117,40 +128,40 @@ body{
 /*    left: 55% !important;*/
 /*}*/
 
-.gamerCardMoved{
-    animation: gamerCardMovement 1s ease;
-    top: 33%;
-    left: 30%;
-}
-.compCardMoved{
-    animation: compCardMovement 1s ease;
-    top: 33%;
-    left: 60%;
-}
+/*.gamerCardMoved{*/
+/*    animation: gamerCardMovement 1s ease;*/
+/*    top: 33%;*/
+/*    left: 30%;*/
+/*}*/
+/*.compCardMoved{*/
+/*    animation: compCardMovement 1s ease;*/
+/*    top: 33%;*/
+/*    left: 60%;*/
+/*}*/
 
-@keyframes gamerCardMovement {
-    from{
-        top: 40%;
-        left: 25%;
-    }
-    to{
-        top: 33%;
-        left: 30% !important;
-    }
-}
+/*@keyframes gamerCardMovement {*/
+/*    from{*/
+/*        top: 40%;*/
+/*        left: 25%;*/
+/*    }*/
+/*    to{*/
+/*        top: 33%;*/
+/*        left: 30% !important;*/
+/*    }*/
+/*}*/
 
-@keyframes compCardMovement {
-    from{
-        /*top: 0;*/
-        /*left: 25%;*/
-        top: 0;
-        left: 25%
-    }
-    to{
-        top: 33%;
-        left: 60%;
-    }
-}
+/*@keyframes compCardMovement {*/
+/*    from{*/
+/*        !*top: 0;*!*/
+/*        !*left: 25%;*!*/
+/*        top: 0;*/
+/*        left: 25%*/
+/*    }*/
+/*    to{*/
+/*        top: 33%;*/
+/*        left: 60%;*/
+/*    }*/
+/*}*/
 
 
 #gameField{
