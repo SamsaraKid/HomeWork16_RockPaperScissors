@@ -24,10 +24,12 @@ body{
 /*оформление каточек*/
 .cardSet{
     width: 100%;
-    height: 270px;
+    height: 340px;
+    /*height: min-content;*/
     /*position: absolute;*/
     /*align-items: flex-end;*/
     /*flex: 1 0 auto;*/
+    /*border: white solid 1px;*/
 }
 
 .card1{
@@ -39,10 +41,6 @@ body{
 .card3{
     left: 65%;
 }
-
-                        /*#villainsSet .card{*/
-                        /*    top: 300px*/
-                        /*}*/
 
 
 
@@ -56,6 +54,7 @@ body{
     transition: transform 0.25s;
     background-color: black;
     position: absolute;
+    /*position: relative;*/
 }
 
 .hiddenDesc{
@@ -165,7 +164,10 @@ body{
 
 
 #gameField{
-    /*position: absolute;*/
-    height: 260px;
+    /*position: relative;*/
+    width: 100%;
+    height: 230px;
+    /*top: 33%;*/
+    /*border: white solid 1px;*/
 }
 
