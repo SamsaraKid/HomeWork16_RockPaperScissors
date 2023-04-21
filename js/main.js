@@ -1,7 +1,4 @@
 let gamerCommand = false //false - Villains, true - Heroes
-let comp = ''
-let gamer = ''
-const turn = ['1','2','3']
 const win = ['12','23','31']
 const fail = ['13','21','32']
 let scoreg = 0
@@ -9,6 +6,7 @@ let scorec = 0
 
 const horisontalPositions = [$('.card1').css('left'), $('.card2').css('left'), $('.card3').css('left')]
 const verticalPositions = ['73%', '9%']
+
 
 
 function gamePrepare(command) {
@@ -31,6 +29,7 @@ function gamePrepare(command) {
 
 function makeMove(gamerCardNum) {
 
+
     let compCardNum = Math.floor(Math.random() * 3 + 1)
 
     let result = String(gamerCardNum) + String(compCardNum)
@@ -46,10 +45,10 @@ function makeMove(gamerCardNum) {
     //результат игры
     if (win.includes(result)) {
         scoreg++
-        $('#moveResult').text('Вы выиграли')
+        $('#moveResult').text('Победа')
     } else if (fail.includes(result)) {
         scorec++
-        $('#moveResult').text('Вы проиграли')
+        $('#moveResult').text('Поражение')
     } else {
         $('#moveResult').text('Ничья')
     }
@@ -62,14 +61,19 @@ function makeMove(gamerCardNum) {
         $('.gamerSet .cardButton').prop('disabled', false)
         $('#moveResult').text('')
     }, 1200)
+
+
 }
 
 
 
 function customHover() {
-    if ($(this).parent().attr("class").indexOf('gamerSet') > 0) {$(this).addClass('gamerHover')}
-    else {$(this).addClass('compHover')}
-    $('.hiddenDesc', this).css('display','block')
+    if ($(this).parent().attr("class").indexOf('gamerSet') > 0) {
+        $(this).addClass('gamerHover')
+    } else {
+        $(this).addClass('compHover')
+    }
+    $('.hiddenDesc', this).css('display', 'block')
 }
 
 function customUnhover() {

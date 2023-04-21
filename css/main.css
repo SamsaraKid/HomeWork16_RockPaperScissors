@@ -4,23 +4,40 @@
 
 
 
-@font-face{font-family: BebasNeue; src: url("../img/ofont.ru_Bebas Neue.ttf"); }
+@font-face{font-family: BebasNeue; src: url("../img/Bebas Neue Cyrillic.ttf"); }
 #wrap, #gameDesc button{
     font-family: "BebasNeue";
-
-    /*text-transform: uppercase;*/
+    text-transform: uppercase;
     font-size: 1vw;
-    line-height: 5px;
-    font-weight: 1000;
-    letter-spacing: 4px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    text-shadow: black 1px 0 10px;
+}
+
+#gameDesc{
+    line-height: 3vw;
+}
+
+#gameDesc button{
+    background-color: #fa2929;
+    border-radius: 5px;
+    border-color: black;
+}
+
+#gameDesc button:hover{
+    background-color: #fc5757;
 }
 
 h1{
-    margin-top: 4vw;
+    margin-top: 3vw;
 }
 
-h2{
-    margin-top: 2vw;
+button h1{
+    margin: 0;
+}
+
+h2, h3{
+    margin-top: 1vw;
 }
 
 body{
